@@ -5,19 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-
 public class HomeController {
-	
-	@RequestMapping(value="/", method = RequestMethod.POST)
-	public String home() throws Exception{
-		
-		return "/WEB-INF/views/index.jsp";
-		
-		
-		
-		}
+
+	@RequestMapping(value="/", method = RequestMethod.GET)
+	public String home() throws Exception {
+
+		System.out.println("home controller");
+		return "index";
 	}
-	
 
-
-
+}
