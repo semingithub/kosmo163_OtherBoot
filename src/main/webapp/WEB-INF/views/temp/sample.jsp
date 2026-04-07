@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<c:import url="/WEB-INF/views/temp/head_css/jsp"></c:import>
+<c:import url="/WEB-INF/views/temp/head_css.jsp"></c:import>
 </head>
 <body id="page-top">
 	<!-- Page Wrapper -->

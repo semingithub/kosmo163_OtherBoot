@@ -15,6 +15,18 @@ public class DepartmentService {
 		return departmentDAO.list();
 	}
 	
+	public int create(DepartmentDTO departmentDTO) {
+		return departmentDAO.create(departmentDTO);
+	}
+	
+	public int delete(DepartmentDTO departmentDTO) {
+		return departmentDAO.delete(departmentDTO);
+	}
+	
+	public int update(DepartmentDTO departmentDTO) {
+		return departmentDAO.update(departmentDTO);
+	}
+	
 	public DepartmentDTO detail(String num) {
 		return departmentDAO.detail(num);
 	}

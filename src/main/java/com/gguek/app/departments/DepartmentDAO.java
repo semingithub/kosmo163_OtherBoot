@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Repository
 public class DepartmentDAO {
@@ -19,15 +20,23 @@ public class DepartmentDAO {
 		return session.selectList(NAMESPACE+"list");
 	}
 	
-	public void create() {
-		session.insert(NAMESPACE+"create");
+	public int create(DepartmentDTO departmentDTO) {
+		return session.insert(NAMESPACE+"create", departmentDTO);
 	}
 	
-	public void update() {
-		session.update(NAMESPACE+"update");
+	public int delete(DepartmentDTO departmentDTO) {
+		return session.delete(NAMESPACE+"delete", departmentDTO);
+	}
+	
+	public int update(DepartmentDTO departmentDTO) {
+		return session.update(NAMESPACE+"update", departmentDTO);
 	}
 	
 	public DepartmentDTO detail(String num) {
 		return session.selectOne(NAMESPACE+"detail", num);
 	}
+	
+	
+	
 }
+
