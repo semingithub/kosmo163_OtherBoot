@@ -18,7 +18,7 @@
 		SELECT
 			*
 		FROM
-			TB_PORFESSOR
+			TB_PROFESSOR
 		WHERE
 			PROFESSOR_NO=#{professorNo}	
 	</select>
