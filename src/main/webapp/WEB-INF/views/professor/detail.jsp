@@ -7,24 +7,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>List Page</h1>
+	<h1>Detail Page</h1>
 	<table border="1" style="text-align: center;">
 		<thead>
 			<tr>
 				<th>Professor No</th>
 				<th>Professor Name</th>
+				<th>Professor SSN</th>
+				<th>Professor Address</th>
 				<th>Department No</th>
 			<tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${list}" var="l">
+
 				<tr>
-					<td>${l.professorNo}</td>
-					<td><a href="./detail?professorNo=${l.professorNo}" style="text-decoration: none;">${l.professorName}</a></td>
-					<td>${l.departmentNo}</td>
+					<td>${detail.professorNo}</td>
+					<td>${detail.professorName}</td>
+					<td>${detail.professorSsn}</td>
+					<td>${detail.professorAddress}</td>
+					<td>${detail.departmentNo}</td>
 				</tr>
-			</c:forEach>
 		</tbody>
 	</table>
+	<button onclick="location.href='./list'">뒤로가기</button>
 </body>
 </html>
