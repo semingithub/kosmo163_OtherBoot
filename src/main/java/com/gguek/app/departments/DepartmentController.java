@@ -18,6 +18,16 @@ public class DepartmentController {
 	@Autowired
 	private DepartmentService departmentService;
 	
+	
+	
+	public DepartmentController() {
+		System.out.println("DepartmentController 생성");
+	}
+	
+	
+	
+	
+	
 	@GetMapping("list")
 	public void list(Model model) {
 		List<DepartmentDTO> ar = departmentService.list();
