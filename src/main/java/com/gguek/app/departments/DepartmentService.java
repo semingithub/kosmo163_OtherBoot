@@ -8,27 +8,27 @@ import org.springframework.stereotype.Service;
 @Service
 public class DepartmentService {
 
-	@Autowired	
-	private DepartmentDAO departmentDAO;
+	@Autowired
+	private DepartmentMapper departmentMapper;
 	
-	public List<DepartmentDTO> list() {
-		return departmentDAO.list();
+	public List<DepartmentDTO> list() throws Exception {
+		return departmentMapper.list();
 	}
 	
-	public int create(DepartmentDTO departmentDTO) {
-		return departmentDAO.create(departmentDTO);
+	public int create(DepartmentDTO departmentDTO) throws Exception {
+		return departmentMapper.create(departmentDTO);
 	}
 	
-	public int delete(DepartmentDTO departmentDTO) {
-		return departmentDAO.delete(departmentDTO);
+	public int delete(DepartmentDTO departmentDTO) throws Exception {
+		return departmentMapper.delete(departmentDTO);
 	}
 	
-	public int update(DepartmentDTO departmentDTO) {
-		return departmentDAO.update(departmentDTO);
+	public int update(DepartmentDTO departmentDTO) throws Exception {
+		return departmentMapper.update(departmentDTO);
 	}
 	
-	public DepartmentDTO detail(String num) {
-		return departmentDAO.detail(num);
+	public DepartmentDTO detail(DepartmentDTO departmentDTO) throws Exception {
+		return departmentMapper.detail(departmentDTO);
 	}
 	
 }

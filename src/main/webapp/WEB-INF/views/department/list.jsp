@@ -53,7 +53,7 @@
 										<c:forEach items="${list}" var="d">
 											<tr>
 												<td>${d.departmentNo}</td>
-												<td><a href="./detail?num=${d.departmentNo}"
+												<td><a href="./detail?departmentNo=${d.departmentNo}"
 													class="text-decoration-none font-weight-bold">
 														${d.departmentName} </a></td>
 												<td>${d.category}</td>
