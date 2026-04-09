@@ -27,11 +27,11 @@ public class ProfessorService {
 	}
 
 	public int update(ProfessorDTO professorDTO) throws Exception {
-		return professorMapper.create(professorDTO);
+		return professorMapper.update(professorDTO);
 	}
 
 	public int delete(ProfessorDTO professorDTO) throws Exception {
-		return professorMapper.create(professorDTO);
+		return professorMapper.delete(professorDTO);
 	}
 
 }
