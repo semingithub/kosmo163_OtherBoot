@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h1>List Page</h1>
+	<button onclick="location.href='./create'">추가</button>
 	<table border="1" style="text-align: center;">
 		<thead>
 			<tr>
